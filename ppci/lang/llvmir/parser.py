@@ -45,7 +45,7 @@ class LlvmIrParser(RecursiveDescentParser):
             elif self.peek == "!":
                 self.parse_standalone_metadata()
             else:  # pragma: no cover
-                self.error("TODO")
+                self.error("TODO: " + str(self.peek))
                 raise NotImplementedError(str(self.peek))
         return self.module
 
